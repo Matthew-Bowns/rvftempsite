@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border-width: 0;
+    box-sizing: border-box;
+}
+
+.master {
+    overflow: hidden;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+
+.cover-image {
+    height: 100%;
+    width: 100%;
+    background-image: url(/website_placeholder.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.info {
+    font-family: 'Noto Serif', serif;
+    z-index: 9999;
+    bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.info p {
+    margin: 0.2rem 0;
+}
+
+.small-txt {
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width: 600px) {
+
+    .cover-image {
+        background-size: 250%;
+    }
+}
