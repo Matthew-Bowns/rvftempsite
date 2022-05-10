@@ -1,50 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    border-width: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.master {
-    overflow: hidden;
-    text-align: center;
-    height: 100vh;
-    position: relative;
+.container {
+    max-width: 56rem;
+    margin: 0 auto;
 }
 
-.cover-image {
-    height: 100%;
+.header-box {
     width: 100%;
-    background-image: url(/website_placeholder.jpg);
-    background-position: center center;
+    height: 100vh;
+    background-image: url(/images/headerbackground.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
-.info {
-    font-family: 'Noto Serif', serif;
-    z-index: 9999;
-    bottom: 2rem;
+.logo-box {
+    margin: 0 auto;
+    max-width: 40rem;
+    padding: 10% 5rem;
+    text-align: center;
+    color: #09163B;
+}
+
+.logo-box img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.triangle-down {
+    width: 0;
+	height: 0;
+    margin: 4rem auto;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid #09163B;
+}
+
+/* Tab box ================================== */
+
+.tab-box {
+    height: 100%;
+    width: 100%;
+}
+
+.tab-box button {
+    border: none;
+    color: white;
     font-weight: bold;
-    font-size: 1.4rem;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 0.8rem 0;
+    width: 100%;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.425);
+}
+
+.tab-box button:hover {
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.tab-hint {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+.tab-buttons {
+    display: grid;
+    margin: 0 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+}
+
+#fiction-btn {
+    background-color: #0E276C;
+}
+
+#documentary-btn {
+    background-color: #004FB9;
+}
+
+#branded-btn {
+    background-color: #322C9E;
+}
+
+.tab-area {
+    padding: 2rem 4rem;
+    width: 100%;
+}
+
+.tab {
+    border: solid;
+    border-width: 2px;
+    border-radius: 0.5rem;
+    border-color: #322C9E;
+    background-color: #0E276C;
+    color: white;
+}
+
+.tab-image {
+    width: 100%;
+    height: 30rem;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+.hide-tab {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.img-text {
     position: absolute;
+    bottom: 2rem;
+    padding: 0 2rem;
 }
 
-.info p {
-    margin: 0.2rem 0;
+.img-text a {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
 }
 
-.small-txt {
-    font-size: 0.8rem;
+.img-credit {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-@media screen and (max-width: 600px) {
-
-    .cover-image {
-        background-size: 250%;
-    }
+.tab-description {
+    padding: 0.5rem 2rem 2rem 2rem;
 }
+
+/* Contact form area ============================== */
+
+.contact-area {
+    background-color: #09163B;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+.required::before {
+    content: "*";
+    font-size: 1.3rem;
+    color: red;
+}
+
+label {
+    color: white;
+    padding: 1rem 0 0.2rem 0;
+}
+
+input[type=text], [type=email] {
+    padding: 0.6rem 0.5rem;
+    font-size: 1rem;
+}
+
+.form-container {
+    max-width: 32rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    color: white;
+}
+
+.form-container p, h3 {
+    text-align: center;
+    letter-spacing: 0.0rem;
+}
+
+.form-container p {
+    padding-top: 7rem;
+}
+
+.form-container h3 {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}
+
+form {
+    display: grid;
+    grid-auto-rows: auto;
+}
+
+textarea {
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+input[type=submit] {
+    border: none;
+    width: 80%;
+    margin: 1.2rem auto;
+    padding: 0.8rem;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    background-color: #004FB9;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    background-color: #437cc5;
+}
+
